@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cfe69f2-cad0-41ae-ac37-dcdbe84c66cd" name="Changes" comment="using codegen(task 2)" />
+    <list default="true" id="0cfe69f2-cad0-41ae-ac37-dcdbe84c66cd" name="Changes" comment="input trace viewer(task 3)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754363638126</updated>
       <workItem from="1754363641420" duration="444000" />
-      <workItem from="1754364138898" duration="1732000" />
+      <workItem from="1754364138898" duration="2753000" />
     </task>
     <task id="LOCAL-00001" summary="first structure">
       <option name="closed" value="true" />
@@ -108,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754365566252</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="input trace viewer(task 3)">
+      <option name="closed" value="true" />
+      <created>1754366190293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754366190293</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +128,7 @@
     <MESSAGE value="first structure" />
     <MESSAGE value="navigation(task 1)" />
     <MESSAGE value="using codegen(task 2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="using codegen(task 2)" />
+    <MESSAGE value="input trace viewer(task 3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="input trace viewer(task 3)" />
   </component>
 </project>
