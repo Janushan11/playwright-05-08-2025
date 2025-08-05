@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('login' ,async ({ page }) => {
+test.beforeEach(async ({ page }) => {
     // Navigate to the login page
     await page.goto('https://www.saucedemo.com/')
 
@@ -10,19 +10,13 @@ test('login' ,async ({ page }) => {
 
     await page.locator('[data-test="login-button"]').click();
     await page.waitForURL('https://www.saucedemo.com/inventory.html');
-    await page.close()
+    //await page.close()
 })
+
+
 
 test('Homepage' ,async ({ page }) => {
 
-    await page.goto('https://www.saucedemo.com/')
-
-
-    await page.locator('[data-test="username"]').fill('standard_user');
-    await page.locator('[data-test="password"]').fill('secret_sauce');
-
-    await page.locator('[data-test="login-button"]').click();
-    await page.waitForURL('https://www.saucedemo.com/inventory.html');
 
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
@@ -33,14 +27,7 @@ test('Homepage' ,async ({ page }) => {
 
 test('logout' ,async ({ page }) => {
 
-    await page.goto('https://www.saucedemo.com/')
 
-
-    await page.locator('[data-test="username"]').fill('standard_user');
-    await page.locator('[data-test="password"]').fill('secret_sauce');
-
-    await page.locator('[data-test="login-button"]').click();
-    await page.waitForURL('https://www.saucedemo.com/inventory.html');
     await page.getByRole('button', { name: 'Open Menu' }).click();
     await page.locator('[data-test="logout-sidebar-link"]').click();
     await page.close()
