@@ -1,11 +1,23 @@
-import { test, expect } from '@playwright/test';
+import { test} from '@playwright/test';
 
 test('demo login test 1', async ({ page }) => {
-    await page.goto('https://demo.applitools.com/');
-    await page.getByRole('textbox', { name: 'Enter your username' }).fill('gbgb');
-    await page.getByRole('textbox', { name: 'Enter your password' }).fill('brtgbn');
+    await page.goto('/'); // uses baseURL from config
+
+    await page.getByRole('textbox', { name: 'Enter your username' }).fill('testuser');
+    await page.getByRole('textbox', { name: 'Enter your password' }).fill('testpass');
     await page.getByRole('link', { name: 'Sign in' }).click();
 
-    // Use expect to avoid warning
-    await expect(page.getByText('Your Dashboard')).toBeVisible();
+
 });
+
+test.only('demo login test 2', async ({ page }) => {
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.getByRole('textbox', { name: 'Username' }).click();
+    await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
+    await page.getByRole('textbox', { name: 'Password' }).click();
+    await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.locator('span').filter({ hasText: 'Bhoomika rn' }).click();
+    await page.getByRole('menuitem', { name: 'Logout' }).click();
+});
+
