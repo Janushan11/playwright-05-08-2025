@@ -10,7 +10,7 @@ test('demo login test 1', async ({ page }) => {
 
 });
 
-test.only('demo login test 2', async ({ page }) => {
+test('demo login test 2', async ({ page }) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     await page.getByRole('textbox', { name: 'Username' }).click();
     await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
@@ -22,4 +22,16 @@ test.only('demo login test 2', async ({ page }) => {
 
     //2nd
 });
+
+test.only('demo login test 3', async ({ page }) => {
+
+    await page.goto('https://admin-demo.nopcommerce.com/login');
+    await page.getByRole('textbox', { name: 'Email:' }).click();
+    await page.getByRole('textbox', { name: 'Email:' }).fill('admin@yourstore.com');
+    await page.getByRole('textbox', { name: 'Password:' }).click();
+    await page.getByRole('textbox', { name: 'Password:' }).fill('admin');
+    await page.getByRole('checkbox', { name: 'Remember me?' }).check();
+    await page.getByRole('button', { name: 'Log in' }).click();
+
+})
 
